@@ -3,7 +3,8 @@ let express = require('express');
 let bodyParser = require('body-parser')
 let app = express();
 
-app.use(bodyParser.urlenconded({extended: false}))
+// ver si funciona solo en post
+app.use(bodyParser.urlencoded({extended: false}))
 
 app.use((req, res, next) => { 
   console.log(`${req.method} ${req.path} - ${req.ip}`) 
